@@ -5,7 +5,7 @@ menuTitle: Portfolio
 
 This is a demo site of the [HeroBlog](https://github.com/greglobinski/gatsby-starter-hero-blog), a [GatsbyJS](https://www.gatsbyjs.org/) starter.
 
-### Features:
+### Features
 
 - Easy editable content in **Markdown** files (posts, pages and parts)
 - **CSS** with `styled-jsx` and `PostCSS`

@@ -1,6 +1,6 @@
 # HeroBlog
 
-A [GatsbyJS](https://www.gatsbyjs.org/) blog starter. <br /><br />
+A [GatsbyJS](https://www.gatsbyjs.org/) blog starter.
 
 [![GitHub tag](https://img.shields.io/github/tag/greglobinski/gatsby-starter-hero-blog.svg)](https://github.com/greglobinski/gatsby-starter-personal-blog)
 [![GitHub stars](https://img.shields.io/github/stars/greglobinski/gatsby-starter-hero-blog.svg)](https://github.com/greglobinski/gatsby-starter-personal-blog/stargazers)
@@ -10,13 +10,8 @@ A [GatsbyJS](https://www.gatsbyjs.org/) blog starter. <br /><br />
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/greglobinski/gatsby-starter-hero-blog.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgreglobinski%2Fgatsby-starter-hero-blog)
 
-  <br />
-
-![](static/screens/gatsby-starter-hero-blog.gif) <br />
-
-  <br />
-
-See the starter in action » [demo website](https://gatsby-starter-hero-blog.greglobinski.com/) <br />For more information visit » [dev.greglobinski.com/gatsby-starter-hero-blog](https://dev.greglobinski.com/gatsby-starter-hero-blog/)
+See the starter in action » [demo website](https://gatsby-starter-hero-blog.greglobinski.com/)  
+For more information visit » [dev.greglobinski.com/gatsby-starter-hero-blog](https://dev.greglobinski.com/gatsby-starter-hero-blog/)
 
 ## Description
 
@@ -26,7 +21,7 @@ The starter was initially built for Gatsby v1. Now, thanks to [@mohsenkhanpour](
 
 The original version of the starter is preserved as the branch `gatsby-v1`.
 
-## Features:
+## Features
 
 - Easy editable content in **Markdown** files (posts, pages and parts)
 - **CSS** with `styled-jsx` and `PostCSS`
@@ -74,7 +69,7 @@ Go into the newly created directory and run
 gatsby develop
 ```
 
-to hot-serve your website on http://localhost:8000 or
+to hot-serve your website on <http://localhost:8000> or
 
 ```text
 gatsby build
@@ -82,12 +77,12 @@ gatsby build
 
 to create static site ready to host (/public).
 
-##### External services
+### External services
 
 The starter uses external services for some functions: comments, searching, analytics. To use them you have to secure some access data. All services are free to use or have generous free tiers big enough for a personal blog.
 
-Create an `.env` file like below in the root folder. Change `...` placeholders with real data.
-<br />By default, your `.env` file will be ignored by git. Remove `.env` from `.gitignore` in order to be able to push the file to your repository.
+Create an `.env` file like below in the root folder. Change `...` placeholders with real data.  
+By default, your `.env` file will be ignored by git. Remove `.env` from `.gitignore` in order to be able to push the file to your repository.
 
 ```text
 GOOGLE_ANALYTICS_ID=...
@@ -126,7 +121,8 @@ See also the list of [contributors](https://github.com/greglobinski/gatsby-start
 
 MIT License
 
-Copyright (c) 2017 gatsbyjs <br />Copyright (c) 2018 greg lobinski
+Copyright (c) 2017 gatsbyjs  
+Copyright (c) 2018 greg lobinski
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
