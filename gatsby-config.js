@@ -256,7 +256,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml"
+            output: "/rss.xml",
+            title: "JunMock Blog's RSS Feed"
           }
         ]
       }

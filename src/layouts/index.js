@@ -111,7 +111,6 @@ class Layout extends React.Component {
           } = data;
 
           return (
-            
             <ThemeContext.Provider value={this.state.theme}>
               <FontLoadedContext.Provider value={this.state.font400loaded}>
                 <ScreenWidthContext.Provider value={this.state.screenWidth}>
@@ -120,7 +119,7 @@ class Layout extends React.Component {
                       path={this.props.location.pathname}
                       pages={pages}
                       theme={this.state.theme}
-                    /> 
+                    />
                     <main>{children}</main>
                     <Footer html={footnoteHTML} theme={this.state.theme} />
 
