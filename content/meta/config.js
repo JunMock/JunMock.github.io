@@ -5,7 +5,7 @@ module.exports = {
   siteUrl: "https://JunMock.github.io",
   // pathPrefix: "",
   siteImage: "preview.jpg",
-  siteLanguage: "ko-kr",
+  siteLanguage: "ko",
 
   /* author */
   authorName: "Jun Mock",

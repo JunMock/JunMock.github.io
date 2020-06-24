@@ -10,6 +10,7 @@ export default class HTML extends React.Component {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           {this.props.headComponents}
+          <meta name="google-site-verification" content="uNvT2yOE29c8PV-vjYIAeFWLl9tyx1t0NLeBxiOvumI" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8" />
           <meta name="apple-mobile-web-app-title" content="Lazywill" />

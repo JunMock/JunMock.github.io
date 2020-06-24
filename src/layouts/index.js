@@ -111,6 +111,7 @@ class Layout extends React.Component {
           } = data;
 
           return (
+            
             <ThemeContext.Provider value={this.state.theme}>
               <FontLoadedContext.Provider value={this.state.font400loaded}>
                 <ScreenWidthContext.Provider value={this.state.screenWidth}>
@@ -119,9 +120,7 @@ class Layout extends React.Component {
                       path={this.props.location.pathname}
                       pages={pages}
                       theme={this.state.theme}
-                    >
-                     <meta name="google-site-verification" content="uNvT2yOE29c8PV-vjYIAeFWLl9tyx1t0NLeBxiOvumI" /> 
-                      </Header>
+                    /> 
                     <main>{children}</main>
                     <Footer html={footnoteHTML} theme={this.state.theme} />
 
