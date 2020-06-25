@@ -3,26 +3,9 @@ title: Portfolio
 menuTitle: Portfolio
 ---
 
-This is a demo site of the [HeroBlog](https://github.com/greglobinski/gatsby-starter-hero-blog), a [GatsbyJS](https://www.gatsbyjs.org/) starter.
-
-### Features
-
-- Easy editable content in **Markdown** files (posts, pages and parts)
-- **CSS** with `styled-jsx` and `PostCSS`
-- **SEO** (sitemap generation, robot.txt, meta and OpenGraph Tags)
-- **Social** sharing (Twitter, Facebook, Google, LinkedIn)
-- **Comments** (Facebook)
-- **Images** lazy loading and `webp` support (gatsby-image)
-- Post **categories** (category based post list)
-- Full text **searching** (Algolia)
-- **Contact** form (Netlify form handling)
-- **RSS** feed
-- 100% **PWA** (manifest.webmanifest, offline support, favicons)
-- Google **Analytics**
-- App **favicons** generator (node script)
-- Easy customizable base **styles** via `theme` object generated from `yaml` file (fonts, colors, sizes)
-- React **v.16** (gatsby-plugin-react-next)
-- **Components** lazy loading (social sharing)
-- **ESLint** (google config)
-- **Prettier** code styling
-- Webpack `BundleAnalyzerPlugin`
+![인트로](./intro.png)
+![소개1](./myinfo-1.png)
+![소개2](./myinfo-2.png)
+![마이바1](./mybar-1.png)
+![트래블브릿지1](./travelbridge-1.png)
+![세이프푸드1](./safefood-1.png)
