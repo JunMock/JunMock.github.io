@@ -1,6 +1,6 @@
 ---
 title: 블로그 첫 개시
-category: "spring, java"
+category: "etc"
 cover: photo-1465070845512-2b2dbdc6df66.jpg
 author: JunMock Kim
 ---
