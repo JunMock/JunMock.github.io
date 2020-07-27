@@ -2,5 +2,5 @@
 title: Success
 ---
 
-Thank you.
-I will answer to your message as soon as possible.
+감사합니다.
+추후 연락드리겠습니다.
