@@ -1,23 +1,23 @@
 module.exports = {
-  siteTitle: "HeroBlog - a GatsbyJS starter", // <title>
-  shortSiteTitle: "HeroBlog - GatsbyJS starter", // <title> ending for posts and pages
-  siteDescription: "HeroBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteTitle: "JunMockBlog - Jtree", // <title>
+  shortSiteTitle: "JunMockBlog - Jtree", // <title> ending for posts and pages
+  siteDescription: "JunMockBlog - Jtree",
+  siteUrl: "https://JunMock.github.io",
   // pathPrefix: "",
   siteImage: "preview.jpg",
-  siteLanguage: "en",
+  siteLanguage: "ko",
 
   /* author */
-  authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorName: "Jun Mock",
+  authorTwitterAccount: "kjmzzang011",
 
   /* info */
-  headerTitle: "greg lobinski",
-  headerSubTitle: "presents another one GatsbyJS starter",
+  headerTitle: "Jun Mock",
+  headerSubTitle: "Spring Vue WebRtc Android",
 
   /* manifest.json */
-  manifestName: "HeroBlog - a GatsbyJS starter",
-  manifestShortName: "HeroBlog", // max 12 characters
+  manifestName: "JunMockBlog - Jtree",
+  manifestShortName: "Jun Mock Blog", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
   manifestThemeColor: "#666",
@@ -32,8 +32,8 @@ module.exports = {
 
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/greglobinski" },
-    { name: "twitter", url: "https://twitter.com/greglobinski" },
-    { name: "facebook", url: "http://facebook.com/greglobinski" }
+    { name: "github", url: "https://github.com/JunMock" },
+    { name: "twitter", url: "https://twitter.com/kjmzzang011" },
+    { name: "facebook", url: "http://facebook.com/kjmzzang01" }
   ]
 };
