@@ -10,7 +10,6 @@ import Comments from "./Comments";
 import NextPrev from "./NextPrev";
 
 
-
 const Post = props => {
   const {
     post,

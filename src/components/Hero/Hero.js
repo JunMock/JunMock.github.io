@@ -131,7 +131,8 @@ const Hero = props => {
       `}</style>
     </React.Fragment>
   );
-};
+}
+;
 
 Hero.propTypes = {
   scrollToContent: PropTypes.func.isRequired,
