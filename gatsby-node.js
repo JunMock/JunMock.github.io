@@ -1,167 +1,207 @@
-//const webpack = require("webpack");
-const _ = require("lodash");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const path = require("path");
-const Promise = require("bluebird");
+/* eslint-disable @typescript-eslint/restrict-plus-operands, @typescript-eslint/no-var-requires */
+const path = require('path');
+const _ = require('lodash');
 
-const { createFilePath } = require(`gatsby-source-filesystem`);
-
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode });
-    const fileNode = getNode(node.parent);
-    const source = fileNode.sourceInstanceName;
-    const separtorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
-    const shortSlugStart = separtorIndex ? separtorIndex + 2 : 0;
 
-    if (source !== "parts") {
+  // Sometimes, optional fields tend to get not picked up by the GraphQL
+  // interpreter if not a single content uses it. Therefore, we're putting them
+  // through `createNodeField` so that the fields still exist and GraphQL won't
+  // trip up. An empty string is still required in replacement to `null`.
+  // eslint-disable-next-line default-case
+  switch (node.internal.type) {
+    case 'MarkdownRemark': {
+      const { permalink, layout, primaryTag } = node.frontmatter;
+      const { relativePath } = getNode(node.parent);
+
+      let slug = permalink;
+
+      if (!slug) {
+        slug = `/${relativePath.replace('.md', '')}/`;
+      }
+
+      // Used to generate URL to view this content.
       createNodeField({
         node,
-        name: `slug`,
-        value: `${separtorIndex ? "/" : ""}${slug.substring(shortSlugStart)}`
+        name: 'slug',
+        value: slug || '',
+      });
+
+      // Used to determine a page layout.
+      createNodeField({
+        node,
+        name: 'layout',
+        value: layout || '',
+      });
+
+      createNodeField({
+        node,
+        name: 'primaryTag',
+        value: primaryTag || '',
       });
     }
-    createNodeField({
-      node,
-      name: `prefix`,
-      value: separtorIndex ? slug.substring(1, separtorIndex) : ""
-    });
-    createNodeField({
-      node,
-      name: `source`,
-      value: source
-    });
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve("./src/templates/PostTemplate.js");
-    const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
-    const categoryTemplate = path.resolve("./src/templates/CategoryTemplate.js");
-
-    // Do not create draft post files in production.
-    let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || "development"
-    console.log(`Using environment config: '${activeEnv}'`)
-    let filters = `filter: { fields: { slug: { ne: null } } }`;
-    if (activeEnv == "production") filters = `filter: { fields: { slug: { ne: null } , prefix: { ne: null } } }`
-
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              ` + filters + `
-              sort: { fields: [fields___prefix], order: DESC }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  id
-                  fields {
-                    slug
-                    prefix
-                    source
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        limit: 2000
+        sort: { fields: [frontmatter___date], order: ASC }
+        filter: { frontmatter: { draft: { ne: true } } }
+      ) {
+        edges {
+          node {
+            excerpt
+            frontmatter {
+              title
+              tags
+              date
+              draft
+              excerpt
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 3720) {
+                    aspectRatio
+                    base64
+                    sizes
+                    src
+                    srcSet
                   }
-                  frontmatter {
-                    title
-                    category
+                }
+              }
+              author {
+                id
+                bio
+                avatar {
+                  children {
+                    ... on ImageSharp {
+                      fluid(quality: 100) {
+                        aspectRatio
+                        base64
+                        sizes
+                        src
+                        srcSet
+                      }
+                    }
                   }
                 }
               }
             }
+            fields {
+              readingTime {
+                text
+              }
+              layout
+              slug
+            }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
         }
-
-        const items = result.data.allMarkdownRemark.edges;
-
-        // Create category list
-        const categorySet = new Set();
-        items.forEach(edge => {
-          const {
-            node: {
-              frontmatter: { category }
-            }
-          } = edge;
-
-          if (category && category !== null) {
-            categorySet.add(category);
+      }
+      allAuthorYaml {
+        edges {
+          node {
+            id
           }
-        });
+        }
+      }
+    }
+  `);
 
-        // Create category pages
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/category/${_.kebabCase(category)}/`,
-            component: categoryTemplate,
-            context: {
-              category
-            }
-          });
-        });
+  if (result.errors) {
+    console.error(result.errors);
+    throw new Error(result.errors);
+  }
 
-        // Create posts
-        const posts = items.filter(item => item.node.fields.source === "posts");
-        posts.forEach(({ node }, index) => {
-          const slug = node.fields.slug;
-          const next = index === 0 ? undefined : posts[index - 1].node;
-          const prev = index === posts.length - 1 ? undefined : posts[index + 1].node;
-          const source = node.fields.source;
+  // Create post pages
+  const posts = result.data.allMarkdownRemark.edges;
 
-          createPage({
-            path: slug,
-            component: postTemplate,
-            context: {
-              slug,
-              prev,
-              next,
-              source
-            }
-          });
-        });
+  // Create paginated index
+  // TODO: new pagination
+  const postsPerPage = 1000;
+  const numPages = Math.ceil(posts.length / postsPerPage);
 
-        // and pages.
-        const pages = items.filter(item => item.node.fields.source === "pages");
-        pages.forEach(({ node }) => {
-          const slug = node.fields.slug;
-          const source = node.fields.source;
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? '/' : `/${i + 1}`,
+      component: path.resolve('./src/templates/index.tsx'),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    });
+  });
 
-          createPage({
-            path: slug,
-            component: pageTemplate,
-            context: {
-              slug,
-              source
-            }
-          });
-        });
-      })
-    );
+  posts.forEach(({ node }, index) => {
+    const { slug, layout } = node.fields;
+    const prev = index === 0 ? null : posts[index - 1].node;
+    const next = index === posts.length - 1 ? null : posts[index + 1].node;
+
+    createPage({
+      path: slug,
+      // This will automatically resolve the template to a corresponding
+      // `layout` frontmatter in the Markdown.
+      //
+      // Feel free to set any `layout` as you'd like in the frontmatter, as
+      // long as the corresponding template file exists in src/templates.
+      // If no template is set, it will fall back to the default `post`
+      // template.
+      //
+      // Note that the template has to exist first, or else the build will fail.
+      component: path.resolve(`./src/templates/${layout || 'post'}.tsx`),
+      context: {
+        // Data passed to context is available in page queries as GraphQL variables.
+        slug,
+        prev,
+        next,
+        primaryTag: node.frontmatter.tags ? node.frontmatter.tags[0] : '',
+      },
+    });
+  });
+
+  // Create tag pages
+  const tagTemplate = path.resolve('./src/templates/tags.tsx');
+  const tags = _.uniq(
+    _.flatten(
+      result.data.allMarkdownRemark.edges.map(edge => {
+        return _.castArray(_.get(edge, 'node.frontmatter.tags', []));
+      }),
+    ),
+  );
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag)}/`,
+      component: tagTemplate,
+      context: {
+        tag,
+      },
+    });
+  });
+
+  // Create author pages
+  const authorTemplate = path.resolve('./src/templates/author.tsx');
+  result.data.allAuthorYaml.edges.forEach(edge => {
+    createPage({
+      path: `/author/${_.kebabCase(edge.node.id)}/`,
+      component: authorTemplate,
+      context: {
+        author: edge.node.id,
+      },
+    });
   });
 };
 
-exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
-  switch (stage) {
-    case `build-javascript`:
-      actions.setWebpackConfig({
-        plugins: [
-          new BundleAnalyzerPlugin({
-            analyzerMode: "static",
-            reportFilename: "./report/treemap.html",
-            openAnalyzer: true,
-            logLevel: "error",
-            defaultSizes: "gzip"
-          })
-        ]
-      });
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  // adds sourcemaps for tsx in dev mode
+  if (stage === 'develop' || stage === 'develop-html') {
+    actions.setWebpackConfig({
+      devtool: 'eval-source-map',
+    });
   }
 };

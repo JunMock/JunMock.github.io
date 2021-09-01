@@ -1,204 +1,69 @@
-require("dotenv").config();
-const config = require("./content/meta/config");
-const transformer = require("./src/utils/algolia");
-
-const query = `{
-  allMarkdownRemark( filter: { fields: { slug: { ne: null } } }) {
-    edges {
-      node {
-        objectID: fileAbsolutePath
-        fields {
-          slug
-        }
-        internal {
-          content
-        }
-        frontmatter {
-          title
-        }
-      }
-    }
-  }
-}`;
-
-const queries = [
-  {
-    query,
-    transformer: ({ data }) => {
-      return data.allMarkdownRemark.edges.reduce(transformer, []);
-    }
-  }
-];
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
 
 module.exports = {
-  // pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: config.siteTitle,
-    description: config.siteDescription,
-    siteUrl: config.siteUrl,
-    algolia: {
-      appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-      searchOnlyApiKey: process.env.ALGOLIA_SEARCH_ONLY_API_KEY
-        ? process.env.ALGOLIA_SEARCH_ONLY_API_KEY
-        : "",
-      indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : ""
-    },
-    facebook: {
-      appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ""
-    }
+    title: 'Gatsby Casper',
+    description: 'A port of the casper blog built for gatsby',
+    siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
+  },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
-    `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
-    `gatsby-plugin-styled-jsx-postcss`, // as above
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-plugin-layout`,
+      resolve: 'gatsby-plugin-sharp',
       options: {
-        component: require.resolve(`./src/layouts/`)
-      }
+        defaultQuality: 100,
+        stripMetadata: true,
+      },
     },
     {
-      resolve: `gatsby-plugin-algolia`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-        apiKey: process.env.ALGOLIA_ADMIN_API_KEY ? process.env.ALGOLIA_ADMIN_API_KEY : "",
-        indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : "",
-        queries,
-        chunkSize: 10000 // default: 1000
-      }
+        name: 'content',
+        path: path.join(__dirname, 'src', 'content'),
+      },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/posts/`,
-        name: "posts"
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/pages/`,
-        name: "pages"
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `parts`,
-        path: `${__dirname}/content/parts/`
-      }
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          `gatsby-plugin-sharp`,
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              maxWidth: 800,
-              backgroundColor: "transparent"
-            }
+              wrapperStyle: 'margin-bottom: 1rem',
+            },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-reading-time',
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-images',
             options: {
-              wrapperStyle: `margin-bottom: 2em`
-            }
+              maxWidth: 2000,
+              quality: 100,
+            },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-          {
-            resolve: "gatsby-remark-emojis",
-            options: {
-              // Deactivate the plugin globally (default: true)
-              active: true,
-              // Add a custom css class
-              class: "emoji-icon",
-              // Select the size (available size: 16, 24, 32, 64)
-              size: 64,
-              // Add custom styles
-              styles: {
-                display: "inline",
-                margin: "0",
-                "margin-top": "1px",
-                position: "relative",
-                top: "5px",
-                width: "25px"
-              }
-            }
-          }
-        ]
-      }
+        ],
+      },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-catch-links`,
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        name: config.manifestName,
-        short_name: config.manifestShortName,
-        start_url: config.manifestStartUrl,
-        background_color: config.manifestBackgroundColor,
-        theme_color: config.manifestThemeColor,
-        display: config.manifestDisplay,
-        icons: [
-          {
-            src: "/icons/icon-48x48.png",
-            sizes: "48x48",
-            type: "image/png"
-          },
-          {
-            src: "/icons/icon-96x96.png",
-            sizes: "96x96",
-            type: "image/png"
-          },
-          {
-            src: "/icons/icon-144x144.png",
-            sizes: "144x144",
-            type: "image/png"
-          },
-          {
-            src: "/icons/icon-192x192.png",
-            sizes: "192x192",
-            type: "image/png"
-          },
-          {
-            src: "/icons/icon-256x256.png",
-            sizes: "256x256",
-            type: "image/png"
-          },
-          {
-            src: "/icons/icon-384x384.png",
-            sizes: "384x384",
-            type: "image/png"
-          },
-          {
-            src: "/icons/icon-512x512.png",
-            sizes: "512x512",
-            type: "image/png"
-          }
-        ]
-      }
+        siteUrl: 'https://gatsby-casper.netlify.com',
+      },
     },
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-emotion',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-yaml',
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID
-      }
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
+      resolve: 'gatsby-plugin-feed',
       options: {
         query: `
           {
@@ -216,59 +81,66 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
+                return {
+                  ...edge.node.frontmatter,
                   description: edge.node.excerpt,
-                  date: edge.node.fields.prefix,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
-                });
+                  date: edge.node.frontmatter.date,
+                  url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                };
               });
             },
             query: `
               {
                 allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [fields___prefix] },
-                  filter: {
-                    fields: {
-                      prefix: { ne: null },
-                      slug: { ne: null }
-                    },
-                    frontmatter: {
-                      author: { ne: null }
-                    }
-                  }
+                  filter: { frontmatter: { draft: { ne: true } } }
+                  sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   edges {
                     node {
                       excerpt
                       html
-                      fields {
-                        slug
-                        prefix
-                      }
+                      fields { slug }
                       frontmatter {
                         title
+                        date
                       }
                     }
                   }
                 }
               }
             `,
-            output: "/rss.xml"
-          }
-        ]
-      }
+            output: '/rss.xml',
+            title: 'Ghost\'s Blog',
+            match: '^/blog/',
+          },
+        ],
+      },
     },
     {
-      resolve: `gatsby-plugin-sitemap`
-    },
-    {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-postcss',
       options: {
-        include: /svg-icons/
-      }
-    }
-  ]
+        postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-XXXX-Y',
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // IP anonymization for GDPR compliance
+        anonymize: true,
+        // Disable analytics for users with `Do Not Track` enabled
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ['/preview/**'],
+        // Specifies what percentage of users should be tracked
+        sampleRate: 100,
+        // Determines how often site speed tracking beacons will be sent
+        siteSpeedSampleRate: 10,
+      },
+    },
+  ],
 };
