@@ -9,7 +9,7 @@ import { colors } from '../../styles/colors';
 import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
-import { Twitter } from '../icons/twitter';
+import { Github } from '../icons/github';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
@@ -120,15 +120,15 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                   <Facebook />
                 </a>
               )}
-              {config.twitter && (
+              {config.github && (
                 <a
                   css={SocialLink}
-                  href={config.twitter}
-                  title="Twitter"
+                  href={config.github}
+                  title="github"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Twitter />
+                  <Github />
                 </a>
               )}
             </SocialLinks>

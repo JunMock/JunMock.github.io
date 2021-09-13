@@ -27,9 +27,9 @@ export const Footer: React.FC = () => {
               Facebook
             </a>
           )}
-          {config.twitter && (
-            <a href={config.twitter} target="_blank" rel="noopener noreferrer">
-              Twitter
+          {config.github && (
+            <a href={config.github} target="_blank" rel="noopener noreferrer">
+              Github
             </a>
           )}
 

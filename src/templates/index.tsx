@@ -72,20 +72,7 @@ const IndexPage: React.FC<IndexProps> = props => {
         {config.googleSiteVerification && (
           <meta name="google-site-verification" content={config.googleSiteVerification} />
         )}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={config.title} />
-        <meta name="twitter:description" content={config.description} />
-        <meta name="twitter:url" content={config.siteUrl} />
-        <meta
-          name="twitter:image"
-          content={`${config.siteUrl}${props.data.header.childImageSharp.fixed.src}`}
-        />
-        {config.twitter && (
-          <meta
-            name="twitter:site"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
+        
         <meta property="og:image:width" content={width.toString()} />
         <meta property="og:image:height" content={height.toString()} />
       </Helmet>
@@ -145,7 +132,7 @@ const IndexPage: React.FC<IndexProps> = props => {
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
-    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+    logo: file(relativePath: { eq: "img/JTRee-Logo.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.

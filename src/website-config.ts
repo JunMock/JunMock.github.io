@@ -19,7 +19,7 @@ export interface WebsiteConfig {
   /**
    * full url, no username
    */
-  twitter?: string;
+  github?: string;
   /**
    * hide or show all email subscribe boxes
    */
@@ -52,15 +52,12 @@ const config: WebsiteConfig = {
   title: 'JunMockBlog - Jtree',
   description: 'JunMockBlog - Jtree',
   coverImage: 'img/blog-cover.png',
-  logo: 'img/ghost-logo.png',
+  logo: 'img/JTRee-Logo.png',
   lang: 'ko',
   siteUrl: 'https://JunMock.github.io',
   facebook: 'https://facebook.com/kjmzzang01',
-  twitter: 'https://twitter.com',
+  github: 'https://github.com/JunMock',
   showSubscribe: true,
-  mailchimpAction: 'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
-  mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
-  mailchimpEmailFieldName: 'MERGE0',
   googleSiteVerification: 'uNvT2yOE29c8PV-vjYIAeFWLl9tyx1t0NLeBxiOvumI',
   footer: 'is based on Gatsby Casper',
 };

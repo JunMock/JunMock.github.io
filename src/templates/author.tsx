@@ -44,7 +44,7 @@ interface AuthorTemplateProps {
     authorYaml: {
       id: string;
       website?: string;
-      twitter?: string;
+      github?: string;
       facebook?: string;
       location?: string;
       profile_image?: {
@@ -95,21 +95,6 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
         <meta property="og:url" content={config.siteUrl + location.pathname} />
         <meta property="article:publisher" content="https://www.facebook.com/ghost" />
         <meta property="article:author" content="https://www.facebook.com/ghost" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
-        <meta name="twitter:url" content={config.siteUrl + location.pathname} />
-        {config.twitter && (
-          <meta
-            name="twitter:site"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
-        {config.twitter && (
-          <meta
-            name="twitter:creator"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
       </Helmet>
       <Wrapper>
         <header className="site-archive-header" css={[SiteHeader, SiteArchiveHeader]}>
@@ -157,14 +142,14 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}
-                    {author.twitter && (
+                    {author.github && (
                       <AuthorSocialLink className="author-social-link">
                         <AuthorSocialLinkAnchor
-                          href={`https://twitter.com/${author.twitter}`}
+                          href={`https://github.com/${author.github}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Twitter
+                          GitHub
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}
@@ -205,7 +190,7 @@ export const pageQuery = graphql`
     authorYaml(id: { eq: $author }) {
       id
       website
-      twitter
+      github
       bio
       facebook
       location
