@@ -166,11 +166,16 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             <article css={[PostFull, !post.frontmatter.image && NoImage]}>
               <PostFullHeader className="post-full-header">
                 <PostFullTags className="post-full-tags">
-                  {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                    <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
-                      {post.frontmatter.tags[0]}
-                    </Link>
-                  )}
+                  {post.frontmatter.tags &&
+                    post.frontmatter.tags.length > 0 &&
+                    post.frontmatter.tags.map((tag, index) => {
+                      return (
+                        <React.Fragment key={index}>
+                          <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>
+                          {post.frontmatter.tags.length - 1 > index && ',  '}
+                        </React.Fragment>
+                      );
+                    })}
                 </PostFullTags>
                 <PostFullTitle className="post-full-title">{post.frontmatter.title}</PostFullTitle>
                 <PostFullCustomExcerpt className="post-full-custom-excerpt">
@@ -181,18 +186,24 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                     <AuthorList authors={post.frontmatter.author} tooltip="large" />
                     <section className="post-full-byline-meta">
                       <h4 className="author-name">
-                        {post.frontmatter.author.map(author => (
-                          <Link key={author.id} to={`/author/${_.kebabCase(author.id)}/`}>
-                            {author.id}
-                          </Link>
-                        ))}
+                        {post.frontmatter.author.map((author, index) => {
+                          return (
+                            <React.Fragment key={author.id}>
+                              <Link key={author.id} to={`/author/${_.kebabCase(author.id)}/`}>
+                                {author.id}
+                              </Link>
+                              {post.frontmatter.author.length - 1 > index && ', '}
+                            </React.Fragment>
+                          );
+                        })}
                       </h4>
                       <div className="byline-meta-content">
                         <time className="byline-meta-date" dateTime={datetime}>
                           {displayDatetime}
                         </time>
                         <span className="byline-reading-time">
-                          <span className="bull">&bull;</span>{post.fields.readingTime.text}
+                          <span className="bull">&bull;</span>
+                          {post.fields.readingTime.text}
                         </span>
                       </div>
                     </section>

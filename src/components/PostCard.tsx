@@ -47,11 +47,16 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
       <PostCardContent className="post-card-content">
         <Link className="post-card-content-link" css={PostCardContentLink} to={post.fields.slug}>
           <PostCardHeader className="post-card-header">
-            {post.frontmatter.tags && (
+            {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
               <PostCardPrimaryTag className="post-card-primary-tag">
-                <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
-                  {post.frontmatter.tags[0]}
-                </Link>
+                {post.frontmatter.tags.map((tag, index) => {
+                  return (
+                    <React.Fragment key={index}>
+                      <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>
+                      {post.frontmatter.tags.length - 1 > index && ', '}
+                    </React.Fragment>
+                  );
+                })}
               </PostCardPrimaryTag>
             )}
             <PostCardTitle className="post-card-title">{post.frontmatter.title}</PostCardTitle>
