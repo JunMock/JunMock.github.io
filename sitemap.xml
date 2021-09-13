@@ -8,4 +8,5 @@
 <url> <loc>https://gatsby-casper.netlify.com/tags/db/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://gatsby-casper.netlify.com/author/jt-ree/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://gatsby-casper.netlify.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gatsby-casper.netlify.com/findtag/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
