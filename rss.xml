@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Ghost's Blog]]></title><description><![CDATA[A port of the casper blog built for gatsby]]></description><link>https://gatsby-casper.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Sep 2021 17:14:15 GMT</lastBuildDate><item><title><![CDATA[JPA(Java Persistence API)]]></title><description><![CDATA[JPA(Java Persistence API) 위키백과 - JPA MyBatis 와 같은 SQL맵퍼(ORM이 아니다.)를 이용한 데이터 베이스 쿼리를 사용하였을때 SQL…]]></description><link>https://gatsby-casper.netlify.com/JPA(Java Persistence API)/</link><guid isPermaLink="false">https://gatsby-casper.netlify.com/JPA(Java Persistence API)/</guid><pubDate>Mon, 24 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;JPA(Java Persistence API)&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 01 Oct 2021 06:59:56 GMT</lastBuildDate><item><title><![CDATA[JPA(Java Persistence API)]]></title><description><![CDATA[JPA(Java Persistence API) 위키백과 - JPA MyBatis 와 같은 SQL맵퍼(ORM이 아니다.)를 이용한 데이터 베이스 쿼리를 사용하였을때 SQL…]]></description><link>https://junmock.github.io/JPA(Java Persistence API)/</link><guid isPermaLink="false">https://junmock.github.io/JPA(Java Persistence API)/</guid><pubDate>Mon, 24 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;JPA(Java Persistence API)&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;위키백과 - JPA&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -22,7 +22,7 @@
 &lt;h3&gt;JPA의 구현체&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Hibernate&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[버그,오류(에러),예외,경고]]></title><description><![CDATA[…]]></description><link>https://gatsby-casper.netlify.com/버그,오류(에러),예외,경고/</link><guid isPermaLink="false">https://gatsby-casper.netlify.com/버그,오류(에러),예외,경고/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;버그, 오류(에러), 예외 그리고 경고&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[버그,오류(에러),예외,경고]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/버그,오류(에러),예외,경고/</link><guid isPermaLink="false">https://junmock.github.io/버그,오류(에러),예외,경고/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;버그, 오류(에러), 예외 그리고 경고&lt;/h2&gt;
 &lt;p&gt;개발 혹은 사용중 생기는 빨간색 혹은 노란색 표시들이 많다.&lt;br&gt;
 이러한 표시는 예외, 오류 그리고 경고를 의미한다.&lt;br&gt;
 차이점과 특징에 대해서 알아보려고 한다.&lt;/p&gt;
