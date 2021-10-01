@@ -3,11 +3,12 @@
 <url> <loc>https://junmock.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/버그,오류(에러),예외,경고/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/JPA(Java Persistence API)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://junmock.github.io/temp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/temp2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://junmock.github.io/자료구조 - Data Structure/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/tags/개발-지식/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/tags/자바-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/tags/db/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://junmock.github.io/tags/자료구조/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/author/jt-ree/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/findtag/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
