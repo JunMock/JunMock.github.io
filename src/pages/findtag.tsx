@@ -6,7 +6,7 @@ import { css } from '@emotion/react';
 import * as _ from 'lodash';
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
-
+import styled from '@emotion/styled';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
@@ -37,6 +37,21 @@ const PageTemplate = css`
       /* background: var(--darkmode); */
       background: ${colors.darkmode};
     }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .item {
+    flex: 1 1 30%;
+    margin: 1% 1% 1% 1%;
+  }
+  .item-title {
+    z-index: 10;
+    flex: 1 1 70%;
   }
 `;
 
@@ -77,27 +92,25 @@ const Findtag = ({ data }: TagProps) => {
               <PostFullHeader className="post-full-header">
                 <PostFullTitle className="post-full-title">Find Tag</PostFullTitle>
               </PostFullHeader>
-
-              {data.allTagYaml.edges.map(({ node }) => {
-                return (
-                  <ResponsiveHeaderBackground
-                    css={[outer, SiteHeaderBackground]}
-                    backgroundImage={node?.image?.childImageSharp?.fluid?.src}
-                    className="site-header-background"
-                  >
-                    <SiteHeaderContent css={inner} className="site-header-content">
-                      <SiteTitle className="site-title">
-                        <Link to={`/tags/${_.kebabCase(node.id)}`} activeClassName="nav-current">
-                          {node.id}
-                        </Link>
-                      </SiteTitle>
-                      <SiteDescription className="site-description">
-                        {node.description}
-                      </SiteDescription>
-                    </SiteHeaderContent>
-                  </ResponsiveHeaderBackground>
-                );
-              })}
+              <div className="container">
+                {data.allTagYaml.edges.map(({ node }) => {
+                  return (
+                    <div className="item">
+                      <Link to={`/tags/${_.kebabCase(node.id)}`} activeClassName="nav-current">
+                        <ResponsiveHeaderBackground
+                          css={[outer, SiteHeaderBackground]}
+                          backgroundImage={node?.image?.childImageSharp?.fluid?.src}
+                          className="site-header-background"
+                        >
+                          <SiteHeaderContent css={inner} className="site-header-content">
+                            <SiteTitle className="site-title">{node.id}</SiteTitle>
+                          </SiteHeaderContent>
+                        </ResponsiveHeaderBackground>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
             </article>
           </div>
         </main>
