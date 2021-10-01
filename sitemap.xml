@@ -4,6 +4,7 @@
 <url> <loc>https://junmock.github.io/버그,오류(에러),예외,경고/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/JPA(Java Persistence API)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/temp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://junmock.github.io/temp2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/tags/개발-지식/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/tags/자바-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/tags/db/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
