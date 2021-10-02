@@ -112,7 +112,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'JunMock\'s Blog',
+            title: "JunMock's Blog",
             match: '^/blog/',
           },
         ],
@@ -140,6 +140,14 @@ module.exports = {
         sampleRate: 100,
         // Determines how often site speed tracking beacons will be sent
         siteSpeedSampleRate: 10,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://junmock.github.io',
+        sitemap: 'https://junmock.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],

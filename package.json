@@ -6,8 +6,8 @@
   "author": "asd Cooper <asd@asd.com>",
   "license": "MIT",
   "scripts": {
-    "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master",
-    "build": "gatsby build",
+    "deploy": "gatsby clean && gatsby build && cp src/pages/google130f032ed4f28b3e.html public/ &&gh-pages -d public -b master",
+    "build": "gatsby build ",
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.ts,.tsx .",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx .",
@@ -30,6 +30,7 @@
     "gatsby-plugin-google-analytics": "3.3.0",
     "gatsby-plugin-postcss": "4.3.0",
     "gatsby-plugin-react-helmet": "4.3.0",
+    "gatsby-plugin-robots-txt": "^1.6.10",
     "gatsby-plugin-sharp": "3.3.0",
     "gatsby-plugin-sitemap": "3.3.0",
     "gatsby-plugin-typescript": "3.3.0",
