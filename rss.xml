@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 12:48:48 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 12:51:10 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
 &lt;p&gt;자료구조란 다음과 같은 &lt;code class=&quot;language-text&quot;&gt;특성&lt;/code&gt;을 가지고 있다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터를 효율적으로 &lt;code class=&quot;language-text&quot;&gt;관리&lt;/code&gt;(접근, 수정, 저장, 삭제) 할 수 있는 구조&lt;/li&gt;
@@ -85,83 +85,6 @@ Map의 경우 구조적인 차이(Key,velue)로 인해 개별적으로 정의 �
 &lt;h3&gt;JPA의 구현체&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Hibernate&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[버그,오류(에러),예외,경고]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/버그,오류(에러),예외,경고/</link><guid isPermaLink="false">https://junmock.github.io/버그,오류(에러),예외,경고/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;버그, 오류(에러), 예외 그리고 경고&lt;/h2&gt;
-&lt;p&gt;개발 혹은 사용중 생기는 빨간색 혹은 노란색 표시들이 많다.&lt;br&gt;
-이러한 표시는 예외, 오류 그리고 경고를 의미한다.&lt;br&gt;
-차이점과 특징에 대해서 알아보려고 한다.&lt;/p&gt;
-&lt;h3&gt;버그&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;위키피디아 - 소프트웨어 버그&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;버그(bug)는 소프트웨어가 예상하지 못한 잘못된 결과를 내거나, 오류가 발생,착오나,오작동이 발생하는 등의 문제를 뜻한다. 버그는 프로그램의 소스코드나 설계 과정에서의 오류 때문에 발생한다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;버그는 간단히 말해 프로그래머에 의한 에러이다.&lt;/p&gt;
-&lt;h3&gt;오류(에러)&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;표준국어대사전 - 에러&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;명사: 연산 처리 장치의 잘못된 동작이나 소프트웨어의 잘못 때문에 생기는, 계산값과 참값과의 오차&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;오류는 대부분 실행이 불가능할 정도로 큰 문제를 뜻한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;컴파일 오류 : 컴파일 시점에서 체크할 수 있는 오류로 구문 오류등이 이때 발생한다&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;구문 오류 : 프로그래밍 언어의 문법을 지키지 않아 발생한 오류&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;런타임 오류 : 프로그램이 실행 중 생기는 문제&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;논리 오류 : 잘못된 처리로 원하는 결과를 얻지 못하는 것 대부분 비정상적인 종료가 되진 않음&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;예외&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;위키피디아 - 예외처리&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;예외 처리 또는 오류 처리는 일발적인 실행의 흐름을 바구는 몇 가지 조건을 처리하도록 설계한 프로그래밍 언어의 개념이나 컴퓨터 하드웨어 구조를 말한다.
-빌반적으로 프로그램이 처리되는 동안 특정한 문제가 일어났을 때 처리를 중단하고 다른처리를 하는 것을 예외 처리라고 한다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;예외는 실행 도중 중단될 정도로 큰 문제가 아닐 때 발생하는 것&lt;/p&gt;
-&lt;p&gt;자바에서 (Un)Checked Exception&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Checked Exception
-&lt;ul&gt;
-&lt;li&gt;반드시 예외를 처리 해야함&lt;/li&gt;
-&lt;li&gt;컴파일 단계에서 확인&lt;/li&gt;
-&lt;li&gt;예외 발생시 트랜잭션을 roll-back하지 않음&lt;/li&gt;
-&lt;li&gt;대표적 예외
-&lt;ul&gt;
-&lt;li&gt;IOException&lt;/li&gt;
-&lt;li&gt;SQLException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Unchecked Exception
-&lt;ul&gt;
-&lt;li&gt;명시적인 처리를 하지않아도 됨&lt;/li&gt;
-&lt;li&gt;프로그램 실행 단계&lt;/li&gt;
-&lt;li&gt;예외 발생시 트랜잭션을 roll-back함&lt;/li&gt;
-&lt;li&gt;대표적 예외
-&lt;ul&gt;
-&lt;li&gt;RuntimeExption의 하위예외
-&lt;ul&gt;
-&lt;li&gt;NullPointException&lt;/li&gt;
-&lt;li&gt;IndexOutOfBoundExcetion&lt;/li&gt;
-&lt;li&gt;SystemException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;경고&lt;/h3&gt;
-&lt;p&gt;프로그램의 실행은 가능하지만 잠재적인 문제를 발생 할 수 있는 상태&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;선언한 변수등을 사용하지 않았을 경우&lt;/li&gt;
-&lt;li&gt;I/O 클래스등의 사용후 close하지 않은 경우&lt;/li&gt;
-&lt;li&gt;등등..&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[뽐내 - ppomnae(프로젝트) 를 시작하며]]></title><description><![CDATA[idea : vscode backend spring boot 2.5.5 java 11 jar maven maven dependency web spring rest spring boot devtools database jpa mariadb jdbc…]]></description><link>https://junmock.github.io/뽐내 - ppomnae 를 시작하며/</link><guid isPermaLink="false">https://junmock.github.io/뽐내 - ppomnae 를 시작하며/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;idea : vscode&lt;/h2&gt;
 &lt;h2&gt;backend&lt;/h2&gt;
 &lt;ul&gt;
@@ -257,4 +180,81 @@ Map의 경우 구조적인 차이(Key,velue)로 인해 개별적으로 정의 �
 &lt;/table&gt;
 &lt;p&gt;상수에 대한 설명을 쓰는것은 좋다.&lt;/p&gt;
 &lt;p&gt;실수 혹은 함정에 대한 경고를 써주는것이 좋다.&lt;/p&gt;
-&lt;p&gt;평범한 사람이 예상하지 못할 특이한 동작을 기록하라,.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;평범한 사람이 예상하지 못할 특이한 동작을 기록하라,.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[버그,오류(에러),예외,경고]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/개발지식/버그,오류(에러),예외,경고/</link><guid isPermaLink="false">https://junmock.github.io/개발지식/버그,오류(에러),예외,경고/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;버그, 오류(에러), 예외 그리고 경고&lt;/h2&gt;
+&lt;p&gt;개발 혹은 사용중 생기는 빨간색 혹은 노란색 표시들이 많다.&lt;br&gt;
+이러한 표시는 예외, 오류 그리고 경고를 의미한다.&lt;br&gt;
+차이점과 특징에 대해서 알아보려고 한다.&lt;/p&gt;
+&lt;h3&gt;버그&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;위키피디아 - 소프트웨어 버그&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;버그(bug)는 소프트웨어가 예상하지 못한 잘못된 결과를 내거나, 오류가 발생,착오나,오작동이 발생하는 등의 문제를 뜻한다. 버그는 프로그램의 소스코드나 설계 과정에서의 오류 때문에 발생한다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;버그는 간단히 말해 프로그래머에 의한 에러이다.&lt;/p&gt;
+&lt;h3&gt;오류(에러)&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;표준국어대사전 - 에러&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;명사: 연산 처리 장치의 잘못된 동작이나 소프트웨어의 잘못 때문에 생기는, 계산값과 참값과의 오차&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;오류는 대부분 실행이 불가능할 정도로 큰 문제를 뜻한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;컴파일 오류 : 컴파일 시점에서 체크할 수 있는 오류로 구문 오류등이 이때 발생한다&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;구문 오류 : 프로그래밍 언어의 문법을 지키지 않아 발생한 오류&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;런타임 오류 : 프로그램이 실행 중 생기는 문제&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;논리 오류 : 잘못된 처리로 원하는 결과를 얻지 못하는 것 대부분 비정상적인 종료가 되진 않음&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;예외&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;위키피디아 - 예외처리&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;예외 처리 또는 오류 처리는 일발적인 실행의 흐름을 바구는 몇 가지 조건을 처리하도록 설계한 프로그래밍 언어의 개념이나 컴퓨터 하드웨어 구조를 말한다.
+빌반적으로 프로그램이 처리되는 동안 특정한 문제가 일어났을 때 처리를 중단하고 다른처리를 하는 것을 예외 처리라고 한다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;예외는 실행 도중 중단될 정도로 큰 문제가 아닐 때 발생하는 것&lt;/p&gt;
+&lt;p&gt;자바에서 (Un)Checked Exception&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Checked Exception
+&lt;ul&gt;
+&lt;li&gt;반드시 예외를 처리 해야함&lt;/li&gt;
+&lt;li&gt;컴파일 단계에서 확인&lt;/li&gt;
+&lt;li&gt;예외 발생시 트랜잭션을 roll-back하지 않음&lt;/li&gt;
+&lt;li&gt;대표적 예외
+&lt;ul&gt;
+&lt;li&gt;IOException&lt;/li&gt;
+&lt;li&gt;SQLException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unchecked Exception
+&lt;ul&gt;
+&lt;li&gt;명시적인 처리를 하지않아도 됨&lt;/li&gt;
+&lt;li&gt;프로그램 실행 단계&lt;/li&gt;
+&lt;li&gt;예외 발생시 트랜잭션을 roll-back함&lt;/li&gt;
+&lt;li&gt;대표적 예외
+&lt;ul&gt;
+&lt;li&gt;RuntimeExption의 하위예외
+&lt;ul&gt;
+&lt;li&gt;NullPointException&lt;/li&gt;
+&lt;li&gt;IndexOutOfBoundExcetion&lt;/li&gt;
+&lt;li&gt;SystemException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;경고&lt;/h3&gt;
+&lt;p&gt;프로그램의 실행은 가능하지만 잠재적인 문제를 발생 할 수 있는 상태&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;선언한 변수등을 사용하지 않았을 경우&lt;/li&gt;
+&lt;li&gt;I/O 클래스등의 사용후 close하지 않은 경우&lt;/li&gt;
+&lt;li&gt;등등..&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
