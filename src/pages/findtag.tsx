@@ -5,20 +5,18 @@ import { FluidObject } from 'gatsby-image';
 import { css } from '@emotion/react';
 import * as _ from 'lodash';
 import { Footer } from '../components/Footer';
+
 import SiteNav from '../components/header/SiteNav';
+
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
   inner,
   outer,
   SiteHeader,
-  SiteHeaderContent,
   SiteMain,
-  SiteTitle,
   SiteNavMain,
   SiteArchiveHeader,
-  ResponsiveHeaderBackground,
-  SiteHeaderBackground,
 } from '../styles/shared';
 import { NoImage, PostFull, PostFullHeader, PostFullTitle } from '../templates/post';
 import { colors } from '../styles/colors';
@@ -40,13 +38,45 @@ const PageTemplate = css`
   .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 
   .item {
-    flex: 1 1 30%;
+    flex: 1 1 40%;
     margin: 1% 1% 1% 1%;
   }
+  .item a {
+    position: relative;
+    display: block;
+    padding: 12px 12px;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.35s ease-in-out;
+  }
+
+  .item a:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  .item a:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    bottom: 8px;
+    left: 12px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.25;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .item a:hover:before {
+    right: 12px;
+    opacity: 0.5;
+  }
+
   .item-title {
     z-index: 10;
     flex: 1 1 70%;
@@ -94,8 +124,8 @@ const Findtag = ({ data }: TagProps) => {
                 {data.allTagYaml.edges.map(({ node }) => {
                   return (
                     <div className="item">
-                      <Link to={`/tags/${_.kebabCase(node.id)}`} activeClassName="nav-current">
-                        <SiteTitle className="site-title">{node.id}</SiteTitle>
+                      <Link to={`/tags/${_.kebabCase(node.id)}`}>
+                        <h1 className="item-title">{node.id}</h1>
                       </Link>
                     </div>
                   );

@@ -56,12 +56,10 @@ const About: React.FC = () => (
 
             <PostFullContent className="post-full-content">
               <div className="post-content">
-                <h5>
-                 JTRee 블로그 입니다.
-                </h5>
+                <h5>JTRee 블로그 입니다.</h5>
                 <p>
-                  JAVA SPRING WEBRTC 등등 공부하고있습니다.
-                  그외 다양한 코딩에 대한 흥미를 가지고 있습니다.
+                  JAVA SPRING WEBRTC 등등 공부하고있습니다. 그외 다양한 코딩에 대한 흥미를 가지고
+                  있습니다.
                 </p>
               </div>
             </PostFullContent>
