@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 10:34:35 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 11:02:01 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
 &lt;p&gt;자료구조란 다음과 같은 &lt;code class=&quot;language-text&quot;&gt;특성&lt;/code&gt;을 가지고 있다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터를 효율적으로 &lt;code class=&quot;language-text&quot;&gt;관리&lt;/code&gt;(접근, 수정, 저장, 삭제) 할 수 있는 구조&lt;/li&gt;
@@ -162,44 +162,6 @@ Map의 경우 구조적인 차이(Key,velue)로 인해 개별적으로 정의 �
 &lt;li&gt;선언한 변수등을 사용하지 않았을 경우&lt;/li&gt;
 &lt;li&gt;I/O 클래스등의 사용후 close하지 않은 경우&lt;/li&gt;
 &lt;li&gt;등등..&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[뽐내 - ppomnae(프로젝트) 를 시작하며]]></title><description><![CDATA[idea : vscode backend spring boot 2.5.5 java 11 jar maven maven dependency web spring rest spring boot devtools database jpa mariadb jdbc…]]></description><link>https://junmock.github.io/뽐내 - ppomnae 를 시작하며/</link><guid isPermaLink="false">https://junmock.github.io/뽐내 - ppomnae 를 시작하며/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;idea : vscode&lt;/h2&gt;
-&lt;h2&gt;backend&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;spring boot 2.5.5&lt;/li&gt;
-&lt;li&gt;java 11&lt;/li&gt;
-&lt;li&gt;jar&lt;/li&gt;
-&lt;li&gt;maven&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;maven dependency&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;web
-&lt;ul&gt;
-&lt;li&gt;spring rest&lt;/li&gt;
-&lt;li&gt;spring boot devtools&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;database
-&lt;ul&gt;
-&lt;li&gt;jpa&lt;/li&gt;
-&lt;li&gt;mariadb jdbc&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;annotation
-&lt;ul&gt;
-&lt;li&gt;lombok&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;tester
-&lt;ul&gt;
-&lt;li&gt;junit5&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;rest doc
-&lt;ul&gt;
-&lt;li&gt;swagger 3.0.0&lt;/li&gt;
-&lt;li&gt;spring restdocs (적용예정)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[읽기 좋은 코드를 위해서]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/읽기 좋은 코드 - 수정중/</link><guid isPermaLink="false">https://junmock.github.io/읽기 좋은 코드 - 수정중/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;가독성의 기본 정리&lt;/h2&gt;
 &lt;p&gt;코드는 다른 사람이 그것을 이해하는 데 들이는 시간을 최소화하는 방식으로 작성되어야 한다.&lt;/p&gt;
 &lt;p&gt;나의 코드를 완전히 이해 한다는 것은 그 코드가 자유롭게 수정되고 버그를 짚어내고 수정된 내용을 내가 작성한 다른 부분의 코드와 어떻게 상호작용하는지 알 수 있어야 한다.&lt;/p&gt;
@@ -257,4 +219,42 @@ Map의 경우 구조적인 차이(Key,velue)로 인해 개별적으로 정의 �
 &lt;/table&gt;
 &lt;p&gt;상수에 대한 설명을 쓰는것은 좋다.&lt;/p&gt;
 &lt;p&gt;실수 혹은 함정에 대한 경고를 써주는것이 좋다.&lt;/p&gt;
-&lt;p&gt;평범한 사람이 예상하지 못할 특이한 동작을 기록하라,.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;평범한 사람이 예상하지 못할 특이한 동작을 기록하라,.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[뽐내 - ppomnae(프로젝트) 를 시작하며]]></title><description><![CDATA[idea : vscode backend spring boot 2.5.5 java 11 jar maven maven dependency web spring rest spring boot devtools database jpa mariadb jdbc…]]></description><link>https://junmock.github.io/뽐내 - ppomnae 를 시작하며/</link><guid isPermaLink="false">https://junmock.github.io/뽐내 - ppomnae 를 시작하며/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;idea : vscode&lt;/h2&gt;
+&lt;h2&gt;backend&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;spring boot 2.5.5&lt;/li&gt;
+&lt;li&gt;java 11&lt;/li&gt;
+&lt;li&gt;jar&lt;/li&gt;
+&lt;li&gt;maven&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;maven dependency&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;web
+&lt;ul&gt;
+&lt;li&gt;spring rest&lt;/li&gt;
+&lt;li&gt;spring boot devtools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;database
+&lt;ul&gt;
+&lt;li&gt;jpa&lt;/li&gt;
+&lt;li&gt;mariadb jdbc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;annotation
+&lt;ul&gt;
+&lt;li&gt;lombok&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;tester
+&lt;ul&gt;
+&lt;li&gt;junit5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;rest doc
+&lt;ul&gt;
+&lt;li&gt;swagger 3.0.0&lt;/li&gt;
+&lt;li&gt;spring restdocs (적용예정)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
