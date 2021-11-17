@@ -52,7 +52,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
                 {post.frontmatter.tags.map((tag, index) => {
                   return (
                     <React.Fragment key={index}>
-                      <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>
+                      <Link to={`/tags/${_.kebabCase(tag)}/`}>{tag}</Link>
                       {post.frontmatter.tags.length - 1 > index && ',   '}
                     </React.Fragment>
                   );

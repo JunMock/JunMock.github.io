@@ -56,9 +56,7 @@ interface TagTemplateProps {
 const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
   const tag = pageContext.tag ? pageContext.tag : '';
   const { edges, totalCount } = data.allMarkdownRemark;
-  const tagData = data.allTagYaml.edges.find(
-    n => n.node.id.toLowerCase() === tag.toLowerCase(),
-  );
+  const tagData = data.allTagYaml.edges.find(n => n.node.id.toLowerCase() === tag.toLowerCase());
 
   return (
     <IndexLayout>
@@ -73,13 +71,9 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
         <meta property="og:title" content={`${tag} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + location.pathname} />
         {config.facebook && <meta property="article:publisher" content={config.facebook} />}
-      
       </Helmet>
       <Wrapper>
-        <header
-          className="site-archive-header"
-          css={[SiteHeader, SiteArchiveHeader]}
-        >
+        <header className="site-archive-header" css={[SiteHeader, SiteArchiveHeader]}>
           <div css={[outer, SiteNavMain]}>
             <div css={inner}>
               <SiteNav isHome={false} />
@@ -106,6 +100,7 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
             </SiteHeaderContent>
           </ResponsiveHeaderBackground>
         </header>
+
         <main id="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             <div css={[PostFeed]}>
@@ -120,8 +115,6 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
     </IndexLayout>
   );
 };
-
-export default Tags;
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -187,3 +180,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default Tags;

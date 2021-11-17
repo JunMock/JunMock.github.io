@@ -125,7 +125,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
     <IndexLayout className="post-template">
       <Helmet>
         <html lang={config.lang} />
-        <title>{post.frontmatter.title}</title>
+        <title>{post.frontmatter.title} - {config.title}</title>
 
         <meta name="description" content={post.frontmatter.excerpt || post.excerpt} />
         <meta property="og:site_name" content={config.title} />
@@ -159,6 +159,8 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             </div>
           </div>
         </header>
+        <script>
+    </script>
         <main id="site-main" className="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             {/* TODO: no-image css tag? */}
@@ -170,7 +172,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                     post.frontmatter.tags.map((tag, index) => {
                       return (
                         <React.Fragment key={index}>
-                          <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>
+                          <Link to={`/tags/${_.kebabCase(tag)}/`}>{tag}</Link>
                           {post.frontmatter.tags.length - 1 > index && ',  '}
                         </React.Fragment>
                       );

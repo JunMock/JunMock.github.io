@@ -124,7 +124,7 @@ const Findtag = ({ data }: TagProps) => {
                 {data.allTagYaml.edges.map(({ node }) => {
                   return (
                     <div className="item">
-                      <Link to={`/tags/${_.kebabCase(node.id)}`}>
+                      <Link to={`/tags/${_.kebabCase(node.id)}/`}>
                         <h1 className="item-title">{node.id}</h1>
                       </Link>
                     </div>
