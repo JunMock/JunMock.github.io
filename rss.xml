@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 11:35:57 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 11:39:06 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
 &lt;p&gt;자료구조란 다음과 같은 &lt;code class=&quot;language-text&quot;&gt;특성&lt;/code&gt;을 가지고 있다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터를 효율적으로 &lt;code class=&quot;language-text&quot;&gt;관리&lt;/code&gt;(접근, 수정, 저장, 삭제) 할 수 있는 구조&lt;/li&gt;
@@ -123,7 +123,64 @@ Map의 경우 구조적인 차이(Key,velue)로 인해 개별적으로 정의 �
 &lt;li&gt;spring restdocs (적용예정)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[버그,오류(에러),예외,경고]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/버그,오류(에러),예외,경고/</link><guid isPermaLink="false">https://junmock.github.io/버그,오류(에러),예외,경고/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;버그, 오류(에러), 예외 그리고 경고&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[읽기 좋은 코드를 위해서]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/읽기 좋은 코드 - 수정중/</link><guid isPermaLink="false">https://junmock.github.io/읽기 좋은 코드 - 수정중/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;가독성의 기본 정리&lt;/h2&gt;
+&lt;p&gt;코드는 다른 사람이 그것을 이해하는 데 들이는 시간을 최소화하는 방식으로 작성되어야 한다.&lt;/p&gt;
+&lt;p&gt;나의 코드를 완전히 이해 한다는 것은 그 코드가 자유롭게 수정되고 버그를 짚어내고 수정된 내용을 내가 작성한 다른 부분의 코드와 어떻게 상호작용하는지 알 수 있어야 한다.&lt;/p&gt;
+&lt;p&gt;내가 쓴코드도 시간이지나면 남이 쓴 코드 같을 수 있다.&lt;/p&gt;
+&lt;p&gt;가독성이 좋은 코드는 코드의 효율성, 잘 구성된 아키텍쳐, 테스트의 용이성 등과같은 다른 제약에 거희 방해되지 않는다.
+오히려 더욱 쉬운 코드를 작성할 수 있도록 도울가능성이 크다.&lt;/p&gt;
+&lt;p&gt;표면적인 개선&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;좋은 명명, 설명, 코드의 정렬등..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;명명에 정보를 담아라.
+특정 단어 고르기
+추상적인 이름대신 구체적 이름 사용하기
+접두사 혹은 접미살 추자정보 붙이기
+적당한 길이의 명명
+확장에 대한 가능성 열어두기
+보편적인 이름 피하기.(temp,retval,result)&lt;/p&gt;
+&lt;p&gt;재치있는 명명법보다 간결하고 명확한 명명이 더좋다.&lt;/p&gt;
+&lt;p&gt;result 보다 사용된 연산자 혹은 데이터의 이름으로 값을 받는다.&lt;/p&gt;
+&lt;p&gt;루프반복자를 사용할때 i,j,k보다 데이터의 축약어를 포함하는것이 보기 더좋다 ex ) (user)ui,(member)mi,(place)pi …&lt;/p&gt;
+&lt;p&gt;정보의 단위(ms,double,s,hex …)를 포함한 변수명&lt;/p&gt;
+&lt;p&gt;포멀한 약어의 사용은 현명하다. 하지만 축약어의 남용은 미래의 나에게 독이될 수 있다.&lt;/p&gt;
+&lt;p&gt;코딩 컨벤션을 잘 활용하라.&lt;/p&gt;
+&lt;p&gt;본인이 지은 이름이 다른사람들이 다른 의미로 해설할 가능성이 있는지에 대해서 스스로 질문해 보아라.&lt;/p&gt;
+&lt;p&gt;min과 max를 활용하여 한계를 표현하라&lt;/p&gt;
+&lt;p&gt;불리언 변수명은 완료될 행위에 대한 기준으로 정하라&lt;/p&gt;
+&lt;p&gt;일관성 있는 패턴의 주석의 중복은
+맨위로 옮겨서 한번에 정리하라&lt;/p&gt;
+&lt;p&gt;선언문 interface등.. 은 블럭단위로 구분하라. 코드또한..&lt;/p&gt;
+&lt;p&gt;가치없는 주석은 쓰지말아라
+주석은 코드읽는 사람이 잘 이해할 수 있도록 도와주는 것이다.&lt;/p&gt;
+&lt;p&gt;애매한 명명에 대한 주석을 달지말고 명명을 명확하게 하라. &gt;&gt; 나쁜함수명과같이 나쁘게 작성된 코드를 보정하려는 주석을 쓰지말고 코드를 수정하라.&lt;/p&gt;
+&lt;p&gt;코드의 결함, 개선등에 대한 내용을 적는것도 좋다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;표시&lt;/th&gt;
+&lt;th&gt;보통의 의미&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;TODO:&lt;/td&gt;
+&lt;td&gt;아직 하지 않은 일&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FIXME:&lt;/td&gt;
+&lt;td&gt;오작동을 일으킨다고 알려진 코드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HACK:&lt;/td&gt;
+&lt;td&gt;아름답지 않은 해결책&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;상수에 대한 설명을 쓰는것은 좋다.&lt;/p&gt;
+&lt;p&gt;실수 혹은 함정에 대한 경고를 써주는것이 좋다.&lt;/p&gt;
+&lt;p&gt;평범한 사람이 예상하지 못할 특이한 동작을 기록하라,.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[버그,오류(에러),예외,경고]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/버그,오류(에러),예외,경고/</link><guid isPermaLink="false">https://junmock.github.io/버그,오류(에러),예외,경고/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;버그, 오류(에러), 예외 그리고 경고&lt;/h2&gt;
 &lt;p&gt;개발 혹은 사용중 생기는 빨간색 혹은 노란색 표시들이 많다.&lt;br&gt;
 이러한 표시는 예외, 오류 그리고 경고를 의미한다.&lt;br&gt;
 차이점과 특징에 대해서 알아보려고 한다.&lt;/p&gt;
@@ -200,61 +257,4 @@ Map의 경우 구조적인 차이(Key,velue)로 인해 개별적으로 정의 �
 &lt;li&gt;선언한 변수등을 사용하지 않았을 경우&lt;/li&gt;
 &lt;li&gt;I/O 클래스등의 사용후 close하지 않은 경우&lt;/li&gt;
 &lt;li&gt;등등..&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[읽기 좋은 코드를 위해서]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/읽기 좋은 코드 - 수정중/</link><guid isPermaLink="false">https://junmock.github.io/읽기 좋은 코드 - 수정중/</guid><pubDate>Thu, 20 May 2021 15:11:55 GMT</pubDate><content:encoded>&lt;h2&gt;가독성의 기본 정리&lt;/h2&gt;
-&lt;p&gt;코드는 다른 사람이 그것을 이해하는 데 들이는 시간을 최소화하는 방식으로 작성되어야 한다.&lt;/p&gt;
-&lt;p&gt;나의 코드를 완전히 이해 한다는 것은 그 코드가 자유롭게 수정되고 버그를 짚어내고 수정된 내용을 내가 작성한 다른 부분의 코드와 어떻게 상호작용하는지 알 수 있어야 한다.&lt;/p&gt;
-&lt;p&gt;내가 쓴코드도 시간이지나면 남이 쓴 코드 같을 수 있다.&lt;/p&gt;
-&lt;p&gt;가독성이 좋은 코드는 코드의 효율성, 잘 구성된 아키텍쳐, 테스트의 용이성 등과같은 다른 제약에 거희 방해되지 않는다.
-오히려 더욱 쉬운 코드를 작성할 수 있도록 도울가능성이 크다.&lt;/p&gt;
-&lt;p&gt;표면적인 개선&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;좋은 명명, 설명, 코드의 정렬등..&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;명명에 정보를 담아라.
-특정 단어 고르기
-추상적인 이름대신 구체적 이름 사용하기
-접두사 혹은 접미살 추자정보 붙이기
-적당한 길이의 명명
-확장에 대한 가능성 열어두기
-보편적인 이름 피하기.(temp,retval,result)&lt;/p&gt;
-&lt;p&gt;재치있는 명명법보다 간결하고 명확한 명명이 더좋다.&lt;/p&gt;
-&lt;p&gt;result 보다 사용된 연산자 혹은 데이터의 이름으로 값을 받는다.&lt;/p&gt;
-&lt;p&gt;루프반복자를 사용할때 i,j,k보다 데이터의 축약어를 포함하는것이 보기 더좋다 ex ) (user)ui,(member)mi,(place)pi …&lt;/p&gt;
-&lt;p&gt;정보의 단위(ms,double,s,hex …)를 포함한 변수명&lt;/p&gt;
-&lt;p&gt;포멀한 약어의 사용은 현명하다. 하지만 축약어의 남용은 미래의 나에게 독이될 수 있다.&lt;/p&gt;
-&lt;p&gt;코딩 컨벤션을 잘 활용하라.&lt;/p&gt;
-&lt;p&gt;본인이 지은 이름이 다른사람들이 다른 의미로 해설할 가능성이 있는지에 대해서 스스로 질문해 보아라.&lt;/p&gt;
-&lt;p&gt;min과 max를 활용하여 한계를 표현하라&lt;/p&gt;
-&lt;p&gt;불리언 변수명은 완료될 행위에 대한 기준으로 정하라&lt;/p&gt;
-&lt;p&gt;일관성 있는 패턴의 주석의 중복은
-맨위로 옮겨서 한번에 정리하라&lt;/p&gt;
-&lt;p&gt;선언문 interface등.. 은 블럭단위로 구분하라. 코드또한..&lt;/p&gt;
-&lt;p&gt;가치없는 주석은 쓰지말아라
-주석은 코드읽는 사람이 잘 이해할 수 있도록 도와주는 것이다.&lt;/p&gt;
-&lt;p&gt;애매한 명명에 대한 주석을 달지말고 명명을 명확하게 하라. &gt;&gt; 나쁜함수명과같이 나쁘게 작성된 코드를 보정하려는 주석을 쓰지말고 코드를 수정하라.&lt;/p&gt;
-&lt;p&gt;코드의 결함, 개선등에 대한 내용을 적는것도 좋다.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;표시&lt;/th&gt;
-&lt;th&gt;보통의 의미&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;TODO:&lt;/td&gt;
-&lt;td&gt;아직 하지 않은 일&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;FIXME:&lt;/td&gt;
-&lt;td&gt;오작동을 일으킨다고 알려진 코드&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;HACK:&lt;/td&gt;
-&lt;td&gt;아름답지 않은 해결책&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;상수에 대한 설명을 쓰는것은 좋다.&lt;/p&gt;
-&lt;p&gt;실수 혹은 함정에 대한 경고를 써주는것이 좋다.&lt;/p&gt;
-&lt;p&gt;평범한 사람이 예상하지 못할 특이한 동작을 기록하라,.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/ul&gt;</content:encoded></item></channel></rss>
