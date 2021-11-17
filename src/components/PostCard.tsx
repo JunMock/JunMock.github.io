@@ -53,7 +53,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
                   return (
                     <React.Fragment key={index}>
                       <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>
-                      {post.frontmatter.tags.length - 1 > index && ', '}
+                      {post.frontmatter.tags.length - 1 > index && ',   '}
                     </React.Fragment>
                   );
                 })}
@@ -73,7 +73,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
                 return (
                   <React.Fragment key={author.id}>
                     <Link to={`/author/${_.kebabCase(author.id)}/`}>{author.id}</Link>
-                    {post.frontmatter.author.length - 1 > index && ', '}
+                    {post.frontmatter.author.length - 1 > index && ',   '}
                   </React.Fragment>
                 );
               })}

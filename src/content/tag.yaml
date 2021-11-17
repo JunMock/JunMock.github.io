@@ -25,4 +25,6 @@
 - id: 뽐내
   description: ppomnae 프로젝트를 진행하면서 겪는 시행착오들을 
   image: img/author-cover.jpg
-  
+- id: 이펙티브자바
+  description: 이펙티브자바 3편을 공부하면서 정리한 것
+  image: img/author-cover.jpg

@@ -6,13 +6,11 @@ import { css } from '@emotion/react';
 import * as _ from 'lodash';
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
-import styled from '@emotion/styled';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
   inner,
   outer,
-  SiteDescription,
   SiteHeader,
   SiteHeaderContent,
   SiteMain,
@@ -97,15 +95,7 @@ const Findtag = ({ data }: TagProps) => {
                   return (
                     <div className="item">
                       <Link to={`/tags/${_.kebabCase(node.id)}`} activeClassName="nav-current">
-                        <ResponsiveHeaderBackground
-                          css={[outer, SiteHeaderBackground]}
-                          backgroundImage={node?.image?.childImageSharp?.fluid?.src}
-                          className="site-header-background"
-                        >
-                          <SiteHeaderContent css={inner} className="site-header-content">
-                            <SiteTitle className="site-title">{node.id}</SiteTitle>
-                          </SiteHeaderContent>
-                        </ResponsiveHeaderBackground>
+                        <SiteTitle className="site-title">{node.id}</SiteTitle>
                       </Link>
                     </div>
                   );
