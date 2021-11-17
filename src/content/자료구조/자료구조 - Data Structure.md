@@ -3,6 +3,7 @@ layout: post
 title: '자료구조 - Data Structure'
 author: [JTRee]
 tags: ['자료구조']
+image: img/temp.png
 date: '2021-10-01T18:20:55.000Z'
 draft: false
 excerpt: 자료구조에 대한 설명과 종류에 대해서 설명하고 자바에서의 구현방법에 대해...
