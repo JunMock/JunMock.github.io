@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 19 Nov 2021 01:50:31 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JunMock's Blog]]></title><description><![CDATA[정리에 공유를 곁들인]]></description><link>https://junmock.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 19 Nov 2021 02:03:57 GMT</lastBuildDate><item><title><![CDATA[자료구조 - Data Structure]]></title><description><![CDATA[…]]></description><link>https://junmock.github.io/자료구조/자료구조 - Data Structure/</link><guid isPermaLink="false">https://junmock.github.io/자료구조/자료구조 - Data Structure/</guid><pubDate>Fri, 01 Oct 2021 18:20:55 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
 &lt;p&gt;자료구조란 다음과 같은 &lt;code class=&quot;language-text&quot;&gt;특성&lt;/code&gt;을 가지고 있다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터를 효율적으로 &lt;code class=&quot;language-text&quot;&gt;관리&lt;/code&gt;(접근, 수정, 저장, 삭제) 할 수 있는 구조&lt;/li&gt;
@@ -218,8 +218,9 @@ Map의 경우 구조적인 차이(Key,velue)로 인해 개별적으로 정의 �
 &lt;blockquote&gt;
 &lt;p&gt;위키피디아 - 예외처리&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;예외 처리 또는 오류 처리는 일발적인 실행의 흐름을 바구는 몇 가지 조건을 처리하도록 설계한 프로그래밍 언어의 개념이나 컴퓨터 하드웨어 구조를 말한다.
-빌반적으로 프로그램이 처리되는 동안 특정한 문제가 일어났을 때 
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;예외 처리 또는 오류 처리는 일발적인 실행의 흐름을 바구는 몇 가지 조건을 처리하도록 설계한
+프로그래밍 언어의 개념이나 컴퓨터 하드웨어 구조를 말한다.
+일반적으로 프로그램이 처리되는 동안 특정한 문제가 일어났을 때 
 처리를 중단하고 다른처리를 하는 것을 예외 처리라고 한다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;예외는 실행 도중 중단될 정도로 큰 문제가 아닐 때 발생하는 것&lt;/p&gt;
 &lt;p&gt;자바에서 (Un)Checked Exception&lt;/p&gt;
