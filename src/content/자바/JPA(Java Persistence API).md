@@ -14,7 +14,9 @@ excerpt: JPA에 대한 정보
 > 위키백과 - JPA
 
 ```markdown
-자바 퍼시스턴스 API또는 자바 지속성 API(Java Persistence API, JPA)는 자바 플랫폼 SE와 자바 플랫폼 EE를 사용하는 응용프로그램에서 관계형 데이터베이스의 관리를 표현하는 자바 API이다.
+자바 퍼시스턴스 API또는 자바 지속성 API(Java Persistence API, JPA)는
+자바 플랫폼 SE와 자바 플랫폼 EE를 사용하는 응용프로그램에서 
+관계형 데이터베이스의 관리를 표현하는 자바 API이다.
 ```
 
 MyBatis 와 같은 SQL맵퍼(ORM이 아니다.)를 이용한 데이터 베이스 쿼리를 사용하였을때 SQL을 다루는 시간이 증가.
