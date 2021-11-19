@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://junmock.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://junmock.github.io/개발지식/버그,오류(에러),예외,경고/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/개발지식/읽기 좋은 코드 - 수정중/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/뽐내/뽐내 - ppomnae 를 시작하며/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://junmock.github.io/개발지식/버그,오류(에러),예외,경고/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/자바/JPA(Java Persistence API)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/자료구조/자료구조 - Data Structure/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://junmock.github.io/tags/개발-지식/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
